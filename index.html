@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Number Input</title>
+    <link rel="stylesheet" href="style.css"> </head>
+<body>
+
+    <h1>Enhanced Number Input</h1>
+
+    <div class="main-container">
+        <div class="number-input-container">
+            <label for="numberInput">Enter Number:</label>
+            <input type="text" id="numberInput" placeholder="e.g., 1000, 5k, 2m, 10*5">
+            <div id="liveResult" class="live-result"></div>
+            <div id="quickButtons" class="quick-buttons">
+                <!-- Quick buttons will be added here by JavaScript -->
+            </div>
+        </div>
+        <div class="info-container">
+            <div class="info-section">
+                <h3>Comma Display</h3>
+                <p>Commas are part of display but not entered values.</p>
+            </div>
+            <div class="info-section">
+                <h3>Shortcuts</h3>
+                <p>All you need to do is type in k,m,b or t to get a large value number, reducing errors.</p>
+                <p>Example: 1000, 5k, 2m, 3b, 4t. Works with the basic calculations too!</p>
+            </div>
+            <div class="info-section">
+                <h3>Basic Calculations</h3>
+                <p>You can perform basic calculations using the following operators: +, -, *, /, ()</p>
+                <p>Example: 1250 + 250</p>
+            </div>
+            <div class="info-section">
+                <h3>Live Calculation</h3>
+                <label style="display: flex; align-items: center; gap: 0.5em; margin-bottom: 0.5em;">
+                  <input type="checkbox" id="toggleLiveCalculation" checked>
+                  Show Live Calculation
+                </label>
+                <p>Show's the result of the calculation as you type it. Only displays once an operator is present.</p>
+            </div>
+            <div class="info-section">
+                <h3>Quick Buttons</h3>
+                <label style="display: flex; align-items: center; gap: 0.5em; margin-bottom: 0.5em;">
+                  <input type="checkbox" id="toggleQuickButtons" checked>
+                  Show Quick Buttons
+                </label>
+                <div style="margin-left: 1.5em; margin-bottom: 0.5em; display: flex; flex-direction: row; gap: 0.5em;">
+                  <label style="display: inline; align-items: center; gap: 0.5em;">
+                    <input type="radio" name="quickButtonVisibility" id="alwaysVisibleOption" >
+                    Always visible
+                  </label>
+                  <label style="display: inline; align-items: center; gap: 0.5em;">
+                    <input type="radio" name="quickButtonVisibility" id="focusVisibleOption" checked>
+                    Visible on input focus
+                  </label>
+                </div>
+                <p>Quick press buttons to enter regularly used values make it much quicker.</p>
+            </div>
+            <div class="info-section">
+                <h3>Variables</h3>
+                <p>You can also use the following example variables: IPT (7%), UKVAT (20%)</p>
+                <p>Example: 1000 + UKVAT will give 1,200. <br> 2m + IPT will give 2,140,000. <br> 100 * UKVAT will give you 20.  etc</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 

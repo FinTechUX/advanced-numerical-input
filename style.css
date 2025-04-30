@@ -1,0 +1,129 @@
+body {
+    font-family: sans-serif;
+    padding: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+/* Main container for the side-by-side layout */
+.main-container {
+    display: flex;
+    color: #333;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.number-input-container {
+    flex: 1;
+    min-width: 300px; /* Minimum width before wrapping */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.info-container {
+    flex: 2;
+    min-width: 400px; /* Minimum width before wrapping */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.info-section {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.info-section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.info-section h3 {
+    margin-top: 0;
+    color: #444;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+#numberInput {
+    width: calc(100% - 22px); /* Account for padding */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    margin-bottom: 0px;
+    margin: 1px;
+}
+
+#numberInput:focus {
+    outline: none;
+    border: 2px solid #496bf4;
+    margin: 0px;
+    box-shadow: 0 0 0 2px #c3cefa;
+}
+
+.quick-buttons {
+    margin-top: 8px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.quick-buttons button {
+    padding: 2px 8px;
+    border: 1px solid #ddd;
+    background-color: #eee;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.2s;
+}
+
+.quick-buttons button:hover {
+    background-color: #ddd;
+}
+
+.live-result {
+    margin-top: 0px;
+    padding: 8px;
+    font-size: 1em;
+    color: #333;
+    border-radius: 4px;
+    border: 1px solid #EEE;
+    background: #FBFBFB;
+    display: none;
+    width: auto;
+    position: static;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+    }
+    
+    .number-input-container,
+    .info-container {
+        width: 100%;
+    }
+} 
