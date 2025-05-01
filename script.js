@@ -102,7 +102,12 @@ function parseInput(inputStr) {
         const number = parseFloat(numberStr);
         const varValue = variables[varName.toLowerCase()];
         if (!isNaN(number) && varValue !== undefined) {
-            return `${number} ${operator} (${number} * ${varValue})`;
+            if (operator === '+') {
+                return `${number} + (${number} * ${varValue})`;
+            } else if (operator === '-') {
+                // For subtraction, we need to divide by (1 + percentage) rather than multiply
+                return `${number} / (1 + ${varValue})`;
+            }
         }
         return match;
     });
